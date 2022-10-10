@@ -2,7 +2,10 @@
 html { background: #000;
 font-family: 'Oxanium', cursive;
 }
-body {background: url('https://pbs.twimg.com/media/D2HQu4aWwAAi26B?format=jpg&name=large'); background-size: cover; min-height: 100vh; min-width: 100vw; padding: 0; margin: 0; font-family: 'Oxanium', cursive;}
+body {background: url('https://pbs.twimg.com/media/D2HQu4aWwAAi26B?format=jpg&name=large'); background-size: cover; min-height: 100vh; min-width: 100vw; padding: 0; margin: 0; font-family: 'Oxanium', cursive;
+
+overflow: hidden;
+}
 
 
 header {height: 68px; background: rgba(0,0,0,0.8); width: 100%; display: flex;}
@@ -249,13 +252,19 @@ border-bottom: 9px solid #38B67A; position: relative; margin-right: 1px;
 	background: linear-gradient(15deg, #84D1F2, #4A6F88);
 }
 
-#character { width: 50%; position: relative;
+#character {     width: 50%;
+    position: relative;
+    height: calc(100vh - 60px);
 	.char {width: 100%;  display: none;}
 	.char.show { display: block;}
-	.char img{    width: 100%;
+	.char img{    
+            width: auto;
     display: block;
     margin: 0 auto;
-    margin-top: -75px;}
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    }
 	button {
 		border: 2px solid rgba(191,191,191,0.8); background: rgba(0,0,0,0.7);
 		position: absolute; border-bottom: 8px solid rgba(191,191,191,0.8);
