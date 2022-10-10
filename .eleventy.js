@@ -18,6 +18,6 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "public"
     },
-    pathPrefix: "/Home-cook-recipes/public/"
+    pathPrefix: "/apex-legends/public/"
   };
 };
