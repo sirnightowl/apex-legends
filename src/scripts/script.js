@@ -1,9 +1,31 @@
+// HEADER FILTERS
+/*
+$('.menu  button').on( "click", function() {
+  
+	var hightlighted = $(this).data('highlight');
+	
+	if (hightlighted == "all") {
+		$('.legend-portrait').removeClass('gray');
+		$('.legend-portrait').removeClass('spotlight');
+	}else{
+	
+	$('.legend-portrait').addClass('gray');
+	$('#legends').find("[data-class='" + hightlighted + "']").removeClass('gray');
+	console.log(hightlighted);
+}
+	
+});
+
+*/
+
+
+// right click menu
 $(document).on("contextmenu", ".legend-portrait", function(e){
-   //alert('Context Menu event has fired!');
   
 	var selected = $(this).data('legend');
 	$('body').removeClass();
 	$('body').addClass(selected+'-selected');
+    $('body').addClass('showing-abilities');
 	$('.legend-portrait').removeClass('active');
 	$('.legend-portrait').removeClass('spotlight');
 	if ($(this).hasClass("gray")) {
@@ -60,6 +82,7 @@ $('#character button').on( "click", function() {
 	var selected = $(this).data('legend');
 	$('body').removeClass();
 	$('body').addClass(selected+'-selected');
+    $('body').addClass('showing-abilities');
 	
 });
 
@@ -81,7 +104,6 @@ $('.legend-portrait').on( "click", function() {
 
 //RANDOMISER
 $('fieldset button').on( "click", function() {
-   //alert('Context Menu event has fired!');
   
 	var hightlighted = $(this).data('highlight');
 	
@@ -112,30 +134,29 @@ $('fieldset button').on( "click", function() {
 });
 
 
-// HEADER FILTERS
-$('.menu  button').on( "click", function() {
-   //alert('Context Menu event has fired!');
-  
-	var hightlighted = $(this).data('highlight');
-	
-	if (hightlighted == "all") {
-		$('.legend-portrait').removeClass('gray');
-		$('.legend-portrait').removeClass('spotlight');
-	}else{
-	
-	$('.legend-portrait').addClass('gray');
-	$('#legends').find("[data-class='" + hightlighted + "']").removeClass('gray');
-	console.log(hightlighted);
-}
-	
-});
-
 //ESC MODAL
 $(document).on('keyup', function(event) {
           if(event.key == "Escape") {
-            $('body').removeClass();
+              
+              if ($('body').hasClass("showing-abilities")) {
+                $('body').removeClass();
+                }else{
+                   $('.legend-portrait').removeClass('gray');
+		          $('.legend-portrait').removeClass('spotlight'); 
+                    
+                }
           }
         });
+
+//RANDOMISER
+$('#clear-legends').on( "click", function() {
+  
+	 $('.legend-portrait').removeClass('gray');
+		          $('.legend-portrait').removeClass('spotlight'); 
+	
+});
+
+
 
 
 
