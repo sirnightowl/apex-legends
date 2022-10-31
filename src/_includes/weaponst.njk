@@ -2,7 +2,7 @@
 <html lang="en">
     
     {% include "components/head.njk" %}
-    
+    {% import "_pattern_macros/weapons_card.njk" as weaponcard %}
     
 
 
@@ -33,7 +33,7 @@
 			
 		</div>
 		<a href="/apex-legends/public/index.html"><span>Legends</span></a>
-		<a href="weapons/index.html"><span>Weapons</span></a>
+		<a href="index.html"><span>Weapons</span></a>
 		<a href=""><span>Maps</span></a>
         <a href=""><span>Streamers</span></a>
 		
@@ -52,65 +52,31 @@
     
     
     
-    <div class="row">
+    
+    
+    
+    
+    <div class="row flex-row">
     
         <div class="titlebar">
         <h2>Sub machine guns</h2>
         </div>
         
         
-    <div class="weapons-card">
-        <h3>Alternator</h3>
-        <div class="feat-img">
-            <img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Alternator_SMG.png"/>
-            <p>Twin barrel full-auto SMG.</p>
-        </div>
-        <div class="card-body">
-           
-            <h4>Profile</h4>
-            
-            <div class="row">
-                <div class="col-md-6">Type</div>
-                <div class="col-md-6">Sub machine gun</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">Ammo</div>
-                <div class="col-md-6">Light Rounds</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">Fire modes</div>
-                <div class="col-md-6">Auto</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">Manufacturer</div>
-                <div class="col-md-6">Burrell Defense</div>
-            </div>
-            
-            <!-- https://apexlegends.fandom.com/wiki/Category:Attachment_icons -->
-            <h4>Attachment slots</h4>
-            
-            <div class="attachments">
-                <div class="attachment">
-                    {% include "components/icons/attachments/lasersight.svg" %}
-                </div>
-                <div class="attachment">
-                    {% include "components/icons/attachments/lightmag.svg" %}
-                </div>
-                <div class="attachment">
-                    {% include "components/icons/attachments/standardstock.svg" %}
-                    </div>
-                <div class="attachment">
-                    {% include "components/icons/attachments/optics.svg" %}
-                    </div>
-            </div>
-            
-        </div>
+   
         
         
         
+         {{ weaponcard.weaponcard('Alternator', '4', '5', '4', '3', '1', '1', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e9/Alternator_SMG.png', 'Twin barrel full-auto SMG.', 'Sub machine gun', 'Light', '', 'Auto', '', 'Burrell Defense', 'attach1', 'attach2', 'attach3', 'attach14', 'attach5', '16', '24 (1.5×)', '13 (0.8×)', '600', '160', '19', '22', '25', '27', '1.9', '1.84', '1.77', '1.71', '2.23', '2.16', '2.08', '2.01') }}
         
-    </div>
+        {{ weaponcard.weaponcard('R99', '5', '5', '3', '1', '1', '1', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d5/R-99_SMG.png', 'Rapid-fire automatic SMG.', 'Sub machine gun', 'Light', '', 'Auto', '', 'Lastimosa Armory', 'attach1', 'attach2', 'attach3', 'attach14', 'attach5', '11', '17 (1.5×)', '9 (0.8×)', '1080', '198', '20', '22', '24', '27', '1.8', '1.74', '1.68', '1.62', '2.45', '2.37', '2.29', '2.21') }}
+        
+        
+        {{ weaponcard.weaponcard('C.A.R. SMG', '5', '4', '3', '2', '1', '1', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/13/C.A.R._SMG.png', 'Adaptable SMG. Uses light and heavy ammo.', 'Sub machine gun', 'Light', 'Heavy', 'Auto', '', 'Siwhan Industries', 'attach1', 'attach2', 'attach3', 'attach14', 'attach5', '13', '20 (1.5×)', '10 (0.8×)', '930', '202', '20', '22', '24', '27', '1.7', '1.64', '1.59', '1.53', '2.13', '2.06', '1.99', '1.92') }}
+        
+        {{ weaponcard.weaponcard('Prowler', '5', '4', '3', '2', '1', '1', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/bf/Prowler_Burst_PDW.png', '5-round burst SMG.', 'Sub machine gun', 'Heavy', '', 'Burst(5)', '', 'Lastimosa Armory', 'attach1', 'attach2', 'attach3', 'attach14', 'attach5', '14', '21 (1.5×)', '11 (0.8×)', '666', '167', '20', '25', '30', '35', '2', '1.93', '1.87', '1.8', '2.6', '2.51', '2.43', '2.34') }}
     
+        {{ weaponcard.weaponcard('Volt', '5', '4', '4', '3', '2', '1', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/60/Volt_SMG.png', 'Energy actuated SMG.', 'Sub machine gun', 'Energy', '', 'Auto', '', '', 'attach1', 'attach2', 'attach3', 'attach14', 'attach5', '15', '23 (1.5×)', '12 (0.8×)', '720', '180', '19', '21', '23', '26', '1.44', '1.39', '1.34', '1.3', '2.03', '1.96', '1.89', '1.83') }}
     
    </div> 
     
@@ -134,7 +100,7 @@
     
     {% include "components/abilities/bloodhound.njk" %}
     
-{% include "components/smoke.njk" %}
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

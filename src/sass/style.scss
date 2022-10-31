@@ -1,4 +1,4 @@
-@import "smoke";
+//@import "smoke";
 @import "weapons";
 
 
@@ -6,9 +6,9 @@
 html { background: #000;
 font-family: 'Oxanium', cursive;
 }
-body {background: url('https://pbs.twimg.com/media/D2HQu4aWwAAi26B?format=jpg&name=large'); background-size: cover; min-height: 100vh; min-width: 100vw; padding: 0; margin: 0; font-family: 'Oxanium', cursive;
+body {background: url('https://pbs.twimg.com/media/D2HQu4aWwAAi26B?format=jpg&name=large') fixed; background-size: cover; min-height: 100vh; min-width: 100vw; padding: 0; margin: 0; font-family: 'Oxanium', cursive;
 
-overflow: hidden;
+overflow-x: hidden;
 }
 
 

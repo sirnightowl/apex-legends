@@ -1,0 +1,130 @@
+{% macro weaponcard(title, clo1, clo2, mid1, mid2, far1, far2, img, des, type, ammo, ammo2, firemode, firemode2, manu, attach1, attach2, attach3, attach4, attach5, bodyDamage, headDamage, legsDamage, RPM, DPS, mag1, mag2, mag3, mag4, tacreload1, tacreload2, tacreload3, tacreload4, fullreload1, fullreload2, fullreload3, fullreload4) %}
+
+<div class="weapons-card">
+        <h3>{{title}}</h3>
+        <div class="feat-img">
+            
+            <div class="meter" data-clo1="{{clo1}}" data-clo2="{{clo2}}" data-mid1="{{mid1}}" data-mid2="{{mid2}}" data-far1="{{far1}}" data-far2="{{far2}}">
+                
+                <div class="lab">Far</div>
+                <div class="lab">Mid</div>
+                <div class="lab">Clo</div>
+                <div class="guide"></div>
+                <div class="guide guide2"></div>
+                <div class="guide guide3"></div>
+                <div class="guide guide4"></div>
+                
+                <svg width="50" height="214" viewBox="0 0 50 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   
+                    <path class="far2" d="M45.0698 10C46.5513 6.40723 48.0737 3.06934 49.6348 2.16961e-06L1.48619e-06 0L1.04907e-06 10L45.0698 10Z" fill=""/>
+                    <path class="far2" d="M39.9253 24C38.873 27.1973 37.8481 30.5332 36.8511 34L0 34L4.37114e-07 24L39.9253 24Z" fill=""/>
+                    <path class="far2" d="M40.5933 22C41.7832 18.4883 43.0059 15.1523 44.2598 12L9.61651e-07 12L5.24537e-07 22L40.5933 22Z" fill=""/>
+                    
+                    <path class="far1" d="M28.4204 70C29.0688 66.5928 29.7388 63.2588 30.4302 60L4.37114e-07 60L0 70L28.4204 70Z" fill="#9C4630"/>
+                    <path class="far1" d="M33.1538 48C32.3662 51.2451 31.6011 54.5791 30.8594 58L5.24537e-07 58L9.61651e-07 48L33.1538 48Z" fill="#9C4630"/>
+                    <path class="far1" d="M33.6445 46C34.499 42.5605 35.3789 39.2256 36.2832 36L1.48619e-06 36L1.04907e-06 46L33.6445 46Z" fill="#fff"/>
+                    
+                    <path class="mid2" d="M22.7422 106C23.1768 102.619 23.6309 99.2852 24.103 96H0V106L22.7422 106Z" fill="#107819"/>
+                    <path class="mid2" d="M25.9463 84C25.4092 87.2783 24.8921 90.6123 24.394 94H0V84L25.9463 84Z" fill="blue"/>
+                    <path class="mid2" d="M26.2778 82C26.8462 78.6035 27.4351 75.2695 28.0439 72L2.39232e-06 72L1.95521e-06 82L26.2778 82Z" fill="#107819"/>
+                    
+              
+                    <path class="mid1" d="M19.8667 132C19.5581 135.3 19.2666 138.634 18.9932 142L0 142V132H19.8667Z" fill="#10DF23"/>
+                    <path class="mid1" d="M20.0562 130C20.3799 126.629 20.7212 123.295 21.0806 120L0 120V130H20.0562Z" fill="#fff"/>
+                    <path class="mid1" d="M22.4878 108C22.0742 111.29 21.6787 114.625 21.3018 118L0 118V108L22.4878 108Z" fill="#10DF23"/>
+                    
+                    <path class="clo2" d="M16.8091 178C16.9463 174.643 17.1006 171.309 17.2715 168H2.01072e-06L0 178L16.8091 178Z" fill="#10DF23"/>
+                    <path class="clo2" d="M17.9707 156C17.7559 159.306 17.5576 162.64 17.377 166H2.09815e-06L2.53526e-06 156L17.9707 156Z" fill="#10DF23"/>
+                    <path class="clo2" d="M18.103 154C18.3291 150.637 18.5723 147.303 18.833 144L3.0598e-06 144L2.62268e-06 154L18.103 154Z" fill="#10DF23"/>
+                    
+                    <path class="clo1" d="M16.0981 204C16.0518 207.315 16.021 210.649 16.0078 214L0 214V204H16.0981Z" fill="#107819"/>
+                    <path class="clo1" d="M16.1279 202C16.1816 198.647 16.2524 195.313 16.3394 192H0V202H16.1279Z" fill="#fff"/>
+                    <path class="clo1" d="M16.394 190C16.4893 186.646 16.6011 183.312 16.7295 180L0 180V190H16.394Z" fill="#fff"/>
+                    
+                </svg>
+                
+            </div>
+            <div class="img-frame">
+                <img src="{{img}}"/>
+                <p>{{des}}</p>
+            </div>
+            
+        </div>
+    
+    
+    <div class="clear"></div>
+        <div class="card-body">
+            
+            
+            
+            <div class="attachments">
+            <!-- https://apexlegends.fandom.com/wiki/Category:Attachment_icons -->
+            <h4>Attachment slots</h4>
+            
+            
+                <div class="attachment">
+                    {% include "components/icons/attachments/lasersight.svg" %}
+                </div>
+                <div class="attachment">
+                    {% include "components/icons/attachments/lightmag.svg" %}
+                </div>
+                <div class="attachment">
+                    {% include "components/icons/attachments/standardstock.svg" %}
+                    </div>
+                <div class="attachment">
+                    {% include "components/icons/attachments/optics.svg" %}
+                    </div>
+            </div>
+            
+            <div class="damage">
+                
+            <h4>Damage</h4>
+                <div class="row damage-labels">
+                    <div class="col-md-2">Ammo</div>
+                    <div class="col-md-2">Firemodes</div>
+                    <div class="col-md-2">Body</div>
+                    <div class="col-md-2">Head</div>
+                    <div class="col-md-2">Legs</div>
+                </div>
+             <div class="row">
+                    <div class="col-md-2">{{ammo}}{{ammo2}}</div>
+                    <div class="col-md-2">{{firemode}}{{firemode2}}</div>
+                    <div class="col-md-2">{{bodyDamage}}</div>
+                    <div class="col-md-2">{{headDamage}}</div>
+                    <div class="col-md-2">{{legsDamage}}</div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="stats-row">
+                <h5>Mags</h5>
+                <span class="">{{mag1}}</span> 
+                <span class="grey">{{mag2}}</span>
+                <span class="blue">{{mag3}}</span>
+                <span class="purple">{{mag4}}</span>
+            </div>
+            
+            <div class="stats-row">
+                <h5>Tac reload</h5>
+                <span class="">{{tacreload1}}</span> 
+                <span class="grey">{{tacreload2}}</span>
+                <span class="blue">{{tacreload3}}</span>
+                <span class="purple">{{tacreload4}}</span>
+            </div>
+            
+            <div class="stats-row">
+                <h5>Full reload</h5>
+                <span class="">{{fullreload1}}</span> 
+                <span class="grey">{{fullreload2}}</span>
+                <span class="blue">{{fullreload3}}</span>
+                <span class="purple">{{fullreload4}}</span>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+
+{% endmacro %}

@@ -109,9 +109,6 @@ body {
   to {
     opacity: 0;
 
-    -webkit-transform: translate(-10%, 5%) rotate(.01deg);
-    -moz-transform: translate(-10%, 5%) rotate(.01deg);
-    -o-transform: translate(-10%, 5%) rotate(.01deg);
     transform: translate(-10%, 5%) rotate(.01deg);
   }
 }
