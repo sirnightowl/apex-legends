@@ -730,6 +730,10 @@ header {
   background: linear-gradient(15deg, #84D1F2, #4A6F88);
 }
 
+[data-legend=catalyst] {
+  background: linear-gradient(15deg, #1E76CB, #213F7B);
+}
+
 #character {
   width: 50%;
   position: relative;
