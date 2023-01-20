@@ -2,49 +2,15 @@
 <html lang="en">
     
     {% include "components/head.njk" %}
+     {% import "_pattern_macros/legend_tile.njk" as legendtile %}
     
     
 
 
 <body>
   
+{% include "components/header.njk" %}
 
-<header>
-	<div class="menu">
-		<div class="credit">
-			<span class="credittext">
-				<p>SirNightOwl's</p>
-                <p class="cred">Apex Utilities</p>
-			</span>
-				
-				
-			<div class="badge">
-				<div class="inner">
-                    
-                    {% include "components/icons/apex.svg" %}
-                   
-					
-					
-					
-				</div>
-				
-				</div>
-			
-			
-		</div>
-		<a href="/apex-legends/public/index.html"><span>Legends</span></a>
-		<a href="weapons/index.html"><span>Weapons</span></a>
-		<a href=""><span>Maps</span></a>
-         <a href=""><span>Streamers</span></a>
-		
-		<div class="buffer">
-			
-			
-		</div>
-		
-	</div>
-	
-</header>
 
 
 
@@ -58,92 +24,23 @@
 	</div>
 	
 <div class="row">
-<div class="legend-portrait" data-legend="bloodhound" data-tag="Technological Tracker" data-class="recon">
-	<div class="icon">
-			 {% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/ce/Portrait_Bloodhound_square.png"/>		
-<h2 style="font-size: 14px;">Bloodhound</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="gibraltar" data-tag="Shielded Fortress" data-class="defensive">
-		
-		<div class="icon">
-		{% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/00/Portrait_Gibraltar_square.png"/>		
-<h2>Gibraltar</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="lifeline" data-tag="Combat Medic" data-class="support">
-		
-		<div class="icon">
-			{% include "components/icons/support.svg" %}
-
-		</div>
-	<div class="star">
-        <svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-		
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/fa/Portrait_Lifeline_square.png"/>		
-<h2>Lifeline</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="pathfinder" data-tag="Forward Scout" data-class="recon">
-		
-		<div class="icon">
-			 {% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f5/Portrait_Pathfinder_square.png"/>		
-<h2>Pathfinder</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="wraith" data-tag="Interdimensional Skirmisher" data-class="offensive">
-		
-		<div class="icon">
-			 {% include "components/icons/offensive.svg" %}
-
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/67/Portrait_Wraith_square.png"/>		
-<h2>Wraith</h2>
-	</div>
     
     
-    <div class="legend-portrait" data-legend="bangalore" data-tag="Professional Soldier" data-class="offensive">
-		<div class="icon">
-			 {% include "components/icons/offensive.svg" %}
+  
+    
+    {{ legendtile.legendtile('bloodhound', 'recon','Technological Tracker', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/ce/Portrait_Bloodhound_square.png' ) }}
+    
+    {{ legendtile.legendtile('gibraltar', 'defensive','Shielded Fortress', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/00/Portrait_Gibraltar_square.png' ) }}
 
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/37/Portrait_Bangalore_square.png"/>		
-<h2>Bangalore</h2>
-	</div>
+	
+    {{ legendtile.legendtile('lifeline', 'support','Combat Medic', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/fa/Portrait_Lifeline_square.png' ) }}
+    
+    {{ legendtile.legendtile('pathfinder', 'recon','Forward Scout', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f5/Portrait_Pathfinder_square.png' ) }}
+    
+    {{ legendtile.legendtile('wraith', 'offensive','Interdimensional Skirmisher', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/67/Portrait_Wraith_square.png' ) }}
+ 
+    {{ legendtile.legendtile('bangalore', 'offensive','Professional Soldier', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/37/Portrait_Bangalore_square.png' ) }}
+
     
     
 		</div>
@@ -151,256 +48,58 @@
 <div class="row row2">
 
 	
-<div class="legend-portrait" data-legend="caustic" data-tag="Toxic Trapper" data-class="defensive">
-		
-		<div class="icon">
-			 {% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/45/Portrait_Caustic_square.png"/>		
-<h2>Caustic</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="mirage" data-tag="Holographic Trickster" data-class="offensive">
-		<div class="icon">
-			{% include "components/icons/offensive.svg" %}
+    {{ legendtile.legendtile('caustic', 'defensive','Toxic Trapper', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/45/Portrait_Caustic_square.png' ) }}
+    
+    {{ legendtile.legendtile('mirage', 'offensive','Holographic Trickster', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/c8/Portrait_Mirage_square.png' ) }}
+    
+    {{ legendtile.legendtile('octane', 'offensive','High-Speed Daredevil', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9a/Portrait_Octane_square.png' ) }}
+    
+    {{ legendtile.legendtile('wattson', 'defensive','Static Defender', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/2/22/Portrait_Wattson_square.png' ) }}
+    
+    {{ legendtile.legendtile('crypto', 'recon','Surveillance Expert', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e6/Portrait_Crypto_square.png' ) }}
+    
+    {{ legendtile.legendtile('revenant', 'offensive','Synthetic Nightmare', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d1/Portrait_Revenant_square.png' ) }}
+    
+    
 
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/c8/Portrait_Mirage_square.png"/>		
-<h2>Mirage</h2>
-	</div>
-		
-<div class="legend-portrait" data-legend="octane" data-tag="High-Speed Daredevil" data-class="offensive">
-		<div class="icon">
-				{% include "components/icons/offensive.svg" %}
-
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9a/Portrait_Octane_square.png"/>		
-<h2>Octane</h2>
-	</div>
-
-<div class="legend-portrait" data-legend="wattson" data-tag="Static Defender" data-class="defensive">
-		
-		<div class="icon">
-				{% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/2/22/Portrait_Wattson_square.png"/>		
-<h2>Wattson</h2>
-	</div>
-		
-<div class="legend-portrait" data-legend="crypto" data-tag="Surveillance Expert" data-class="recon">
-		
-		<div class="icon">
-				{% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/e/e6/Portrait_Crypto_square.png"/>		
-<h2>Crypto</h2>
-	</div>
-		
-	<div class="legend-portrait" data-legend="revenant" data-tag="Synthetic Nightmare" data-class="offensive">
-		<div class="icon">
-            {% include "components/icons/offensive.svg" %}
-        </div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d1/Portrait_Revenant_square.png"/>		
-<h2>Revenant</h2>
-	</div>	
-		
 		
 		</div>
 	
 <div class="row row3">
+    
+    
+    
+    {{ legendtile.legendtile('loba', 'support','Translocating Thief', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/05/Portrait_Loba_square.png' ) }}
+    
+    {{ legendtile.legendtile('rampart', 'defensive','Amped Modder', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0f/Portrait_Rampart_square.png' ) }}
+    
+    {{ legendtile.legendtile('horizon', 'offensive','Gravitational Manipulator', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/97/Portrait_Horizon_square.png' ) }}
+    
+    {{ legendtile.legendtile('fuse', 'offensive','Bombastic Explosives Expert', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/be/Portrait_Fuse_square.png' ) }}
+    
+    {{ legendtile.legendtile('valkyrie', 'recon','Winged Avenger', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b0/Portrait_Valkyrie_square.png' ) }}
+    
+    {{ legendtile.legendtile('seer', 'recon','Ambush Artist', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f2/Portrait_Seer_square.png' ) }}
 
-	
-<div class="legend-portrait" data-legend="loba" data-tag="Translocating Thief" data-class="support">
-		
-		<div class="icon">
-			{% include "components/icons/support.svg" %}
 
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/05/Portrait_Loba_square.png"/>		
-<h2>Loba</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="rampart" data-tag="Amped Modder" data-class="defensive">
-		<div class="icon">
-			{% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0f/Portrait_Rampart_square.png"/>		
-<h2>Rampart</h2>
-	</div>
-		
-<div class="legend-portrait" data-legend="horizon" data-tag="Gravitational Manipulator" data-class="offensive">
-		<div class="icon">
-			{% include "components/icons/offensive.svg" %}
-
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/97/Portrait_Horizon_square.png"/>		
-<h2>Horizon</h2>
-	</div>
-
-<div class="legend-portrait" data-legend="fuse" data-tag="Bombastic Explosives Expert" data-class="offensive">
-		
-		<div class="icon">
-			{% include "components/icons/offensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/be/Portrait_Fuse_square.png"/>		
-<h2>Fuse</h2>
-	</div>
-		
-<div class="legend-portrait" data-legend="valkyrie" data-tag="Winged Avenger" data-class="recon">
-		
-		<div class="icon">
-			{% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b0/Portrait_Valkyrie_square.png"/>		
-<h2>Valkyrie</h2>
-	</div>
-		
-	<div class="legend-portrait" data-legend="seer" data-tag="Ambush Artist" data-class="recon">
-	<div class="icon">
-			{% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f2/Portrait_Seer_square.png"/>		
-<h2>Seer</h2>
-	</div>	
 		
 		
 		</div>
 	
 <div class="row row4">
-	
-
-	
-<div class="legend-portrait" data-legend="ash" data-tag="Incisive Instigator" data-class="offensive">
-		
-		<div class="icon">
-			{% include "components/icons/offensive.svg" %}
-
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d3/Portrait_Ash_square.png"/>		
-<h2>Ash</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="madmaggie" data-tag="Rebel Warlord" data-class="offensive">
-		
-		<div class="icon">
-			{% include "components/icons/offensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f7/Portrait_Mad_Maggie_square.png"/>		
-<h2>Mad Maggie</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="newcastle" data-tag="Heroic Defender" data-class="defensive">
-		
-		<div class="icon">
-			{% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0f/Portrait_Newcastle_square.png"/>		
-<h2>Newcastle</h2>
-	</div>
-	
-<div class="legend-portrait" data-legend="vantage" data-tag="Survivalist Sniper " data-class="recon">
-		
-		<div class="icon">
-			{% include "components/icons/recon.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f8/Portrait_Vantage_square.png"/>		
-<h2>Vantage</h2>
-	</div>
-		
-<div class="legend-portrait" data-legend="catalyst" data-tag="Defensive Conjurer" data-class="defensive">
-		
-		<div class="icon">
-			{% include "components/icons/defensive.svg" %}
-		</div>
-	<div class="star">
-		<svg style="width:20px;height:20px" viewBox="0 0 24 24">
-    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
-</svg>
-	</div>
-<img src="https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9a/Portrait_Catalyst_square.png"/>		
-<h2>Catalyst</h2>
-	</div>
     
+     {{ legendtile.legendtile('ash', 'offensive','Incisive Instigator', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d3/Portrait_Ash_square.png' ) }}
+    
+     {{ legendtile.legendtile('madmaggie', 'offensive','Rebel Warlord', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f7/Portrait_Mad_Maggie_square.png' ) }}
+    
+     {{ legendtile.legendtile('newcastle', 'defensive','Heroic Defender', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/0f/Portrait_Newcastle_square.png' ) }}
+    
+     {{ legendtile.legendtile('vantage', 'recon','Survivalist Sniper', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f8/Portrait_Vantage_square.png' ) }}
+    
+     {{ legendtile.legendtile('catalyst', 'defensive','Defensive Conjurer', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9a/Portrait_Catalyst_square.png' ) }}
+	
+
+ 
 </div>
     
     <fieldset>

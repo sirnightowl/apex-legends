@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="/apex-legends/public/css/style.css">
+     
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+   
+    
+    
+    </head>
+    
+
+
+<body>
+  
+
+<header>
+	<div class="menu">
+		<div class="credit">
+			<span class="credittext">
+				<p>SirNightOwl's</p>
+                <p class="cred">Apex Utilities</p>
+			</span>
+				
+				
+			<div class="badge">
+				<div class="inner">
+                    
+                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xml:space="preserve" width="24" height="24" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 512 512" sodipodi:docname="Battle_Royale.svg" inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)" id="svg11"><metadata id="metadata15"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><sodipodi:namedview pagecolor="#ffffff" bordercolor="#FFFFFF" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1600" inkscape:window-height="837" id="namedview13" showgrid="false" inkscape:zoom="1" inkscape:cx="352.34454" inkscape:cy="267.00562" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg11" inkscape:document-rotation="0" inkscape:pagecheckerboard="true"/>
+ <defs id="defs4"><style type="text/css" id="style2">
+   <![CDATA[
+    .str0 {stroke:#FFFFFF}
+    .fil0 {fill:#FFFFFF}
+   ]]>
+  </style></defs>
+ 
+<path style="fill:#FFFFFF;fill-opacity:1;stroke:none;stroke-width:0.955487px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 256.60506,12.198 500,432.91799 435.465,499.802 294.3101,397.56502 h 83.14635 L 256.60426,196.91257 142.51948,397.56502 h 80.2462 L 80.643645,499.802 12,432.91799 Z" id="path837" sodipodi:nodetypes="ccccccccccc"/></svg>
+                   
+					
+					
+					
+				</div>
+				
+				</div>
+			
+			
+		</div>
+		<a href="/apex-legends/public/index.html"><span>Legends</span></a>
+		<a href="/apex-legends/public/weapons/index.html"><span>Weapons</span></a>
+		<a href="/apex-legends/public/maps/index.html"><span>Maps</span></a>
+         <a href=""><span>Streamers</span></a>
+		
+		<div class="buffer">
+			
+			
+		</div>
+		
+	</div>
+	
+</header>
+
+    
+    <style>
+    #map { height: 900px; width: 900px;     background: transparent; }
+    </style>
+
+
+<div id="content">
+    
+    
+    <div id="map">
+    
+    
+   
+    
+    </div>
+    
+
+	
+</div>
+
+
+<footer>
+	
+	
+	
+	
+</footer>
+
+
+
+<!-- Modal -->
+
+    
+    
+    <div class="modal bloodhound-abilities" tabindex="-1">
+  <div class="modal-dialog">
+		<div class="container">
+			
+		<div class="ability">
+			<div class="icon">
+			<img src="https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/ability-icons/apex-grid-tile-legends-abilities-passive-bloodhound.png.adapt.crop16x9.652w.png"/>
+				</div>
+			<h3>Passive</h3>
+			<h2>Tracker</h2>
+			<p>See tracks left behind by your foes</p>
+		</div>
+		
+		<div class="ability">
+			<div class="icon">
+			<img src="https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/ability-icons/apex-grid-tile-legends-abilities-tactical-bloodhound.png.adapt.crop16x9.652w.png"/>
+			</div>
+			<h3>Tactical</h3>
+			<h2>Eye of the Allfather</h2>
+			<p>Briefly reveal hidden enemies, traps, and clues throughout structures in front of you.</p>
+		</div>
+		
+		<div class="ability ultimate">
+			<img src="https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/ability-icons/apex-grid-tile-legends-abilities-ultimate-bloodhound.png.adapt.crop16x9.652w.png"/>
+			<h3>Ultimate</h3>
+			<h2>Beast of the Hunt</h2>
+			<p>Enhances your senses, allowing you to move faster and highlighting your prey</p>
+		</div>
+			
+			<div class="underline">
+				<div class="icon">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_101_5)">
+<path d="M13.5795 9.87502L16.4432 3.1416L19.9373 3.74614L23.4422 11.4346L13.0857 11.819L13.5795 9.87502Z" fill="url(#paint0_linear_101_5)"/>
+<path d="M12.0003 0C9.6269 0 7.30676 0.703808 5.33331 2.02242C3.35987 3.34104 1.82175 5.21523 0.913477 7.40801C0.00519953 9.60078 -0.232447 12.0137 0.230589 14.3415C0.693624 16.6693 1.83655 18.8076 3.51482 20.4859C5.1931 22.1641 7.33136 23.3071 9.65919 23.7701C11.987 24.2331 14.3999 23.9955 16.5927 23.0872C18.7855 22.1789 20.6596 20.6408 21.9783 18.6674C23.2969 16.6939 24.0007 14.3738 24.0007 12.0003C24.0007 8.81765 22.7364 5.76532 20.4859 3.51482C18.2354 1.26432 15.183 0 12.0003 0V0ZM12.0003 21.2979C10.6509 21.3006 9.31715 21.0095 8.09157 20.4448C6.86599 19.8802 5.77801 19.0555 4.90318 18.0281C4.02836 17.0007 3.38764 15.7952 3.02555 14.4953C2.66345 13.1954 2.58865 11.8322 2.80633 10.5005C3.02401 9.16876 3.52896 7.90038 4.28612 6.78342C5.04327 5.66647 6.03448 4.72771 7.19092 4.03233C8.34735 3.33696 9.64128 2.90165 10.9829 2.75662C12.3244 2.61159 13.6815 2.76032 14.9598 3.19248L14.1176 5.17386C13.206 4.89219 12.2473 4.79547 11.2978 4.88937C10.3484 4.98326 9.42722 5.26589 8.58846 5.72066C8.31559 5.54372 7.99295 5.45947 7.6684 5.48042C7.34386 5.50137 7.03473 5.62641 6.78687 5.83697C6.53902 6.04753 6.36566 6.33239 6.29253 6.64928C6.2194 6.96617 6.25039 7.29819 6.3809 7.59607C5.47993 8.74682 4.95371 10.1463 4.87326 11.6056C4.79281 13.0648 5.16201 14.5137 5.93101 15.7565C6.70002 16.9993 7.83181 17.9762 9.17361 18.5555C10.5154 19.1347 12.0026 19.2883 13.4345 18.9956C14.8664 18.7029 16.174 17.9779 17.1808 16.9185C18.1876 15.8592 18.8452 14.5164 19.0647 13.0715C19.2842 11.6266 19.0552 10.1491 18.4085 8.83848C17.7618 7.52787 16.7285 6.44721 15.4482 5.74239L16.2919 3.75762C18.1386 4.71783 19.6095 6.27012 20.469 8.16579C21.3285 10.0615 21.5268 12.1908 21.0321 14.2126C20.5375 16.2343 19.3785 18.0316 17.7409 19.3163C16.1032 20.601 14.0818 21.2988 12.0003 21.2979V21.2979ZM9.23172 6.61591C10.606 5.90356 12.2023 5.74929 13.6876 6.18527L12.3291 9.37775C12.2205 9.36 12.111 9.34911 12.001 9.34514C11.3672 9.3383 10.7515 9.55611 10.263 9.95997C9.77445 10.3638 9.44473 10.9276 9.33226 11.5514C9.21979 12.1752 9.33184 12.8186 9.64855 13.3676C9.96526 13.9167 10.4662 14.3358 11.0624 14.5508C11.6587 14.7657 12.3118 14.7626 12.906 14.5419C13.5002 14.3212 13.997 13.8972 14.3084 13.3452C14.6198 12.7931 14.7256 12.1486 14.6071 11.5259C14.4887 10.9033 14.1535 10.3427 13.6611 9.94357L15.0196 6.75108C16.0876 7.36298 16.9441 8.28548 17.4751 9.39593C18.0061 10.5064 18.1865 11.7522 17.9923 12.9676C17.7981 14.1831 17.2386 15.3107 16.388 16.2004C15.5375 17.0901 14.4362 17.6999 13.2307 17.9486C12.0252 18.1972 10.7726 18.0731 9.63936 17.5926C8.50614 17.1121 7.54603 16.298 6.88669 15.2586C6.22736 14.2192 5.90004 13.0037 5.94825 11.7738C5.99646 10.5439 6.41793 9.35773 7.1566 8.37314C7.41614 8.49274 7.70442 8.53578 7.98757 8.4972C8.27073 8.45862 8.53698 8.34001 8.75505 8.15533C8.97312 7.97064 9.13395 7.72754 9.21863 7.45461C9.3033 7.18167 9.30832 6.89024 9.23307 6.61455L9.23172 6.61591Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_101_5" x1="16.1416" y1="4.22637" x2="17.9519" y2="10.5393" gradientUnits="userSpaceOnUse">
+<stop offset="0.192" stop-color="white" stop-opacity="0.980392"/>
+<stop offset="0.795" stop-color="white" stop-opacity="0.521569"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_101_5">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+		</div>
+				<p><strong>Recon:</strong>Scanning Survey Beacons reveals the next circle location.</p>
+				
+				
+			</div>
+			
+		</div>
+		
+  </div>
+</div>
+    
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/apex-legends/public/scripts/script.js"></script>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    
+    
+    <script>
+   
+ 
+ map = L.map('map', {
+
+            maxZoom: 6,
+            minZoom: 1,
+            crs: L.CRS.Simple,
+            attributionControl: false,
+            renderer: L.canvas(),
+            zoomControl: false,
+            maxBoundsViscosity: 0.0,
+
+        }).setView([0, 0], 2);
+
+       // map.addControl(new L.Control.Fullscreen({ position: 'bottomright' }));
+
+        const southWest = map.unproject([0, 16384], map.getMaxZoom());
+        const northEast = map.unproject([16384, 0], map.getMaxZoom());
+        const center = map.unproject([8192, 8192], map.getMaxZoom());
+
+        map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
+
+        const imageUrl = '/apex-legends/public/img/maps/broken_moon.png';
+
+        map.createPane('apexmap');
+        map.getPane('apexmap').style.zIndex = 200;
+
+       map.createPane('zoneNames');
+        map.getPane('zoneNames').style.zIndex = 230; 
+
+        //Add map image to map
+        L.imageOverlay(imageUrl, new L.LatLngBounds(southWest, northEast), { pane: 'apexmap' }).addTo(map);
+
+        
+        map.setView(center, 2);
+
+      
+
+  
+    </script>
+    
+</body>
+</html>

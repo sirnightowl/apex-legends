@@ -1,0 +1,33 @@
+{% macro legendtile(name, class, tagline, imgurl) %}
+
+<div class="legend-portrait" data-legend="{{name}}" data-tag="{{tagline}}" data-class="{{class}}">
+		
+		<div class="icon">
+            
+            {% if class == 'support' %}
+              {% include "components/icons/support.svg" %}
+            {% elif class == 'defensive' %}
+              {% include "components/icons/defensive.svg" %}
+           {% elif class == 'offensive' %}
+               {% include "components/icons/offensive.svg" %}
+            {% elif class == 'recon' %}
+               {% include "components/icons/recon.svg" %}
+            {% endif %}
+        
+		</div>
+	<div class="star">
+        <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+</svg>
+		
+	</div>
+<img src="{{ imgurl }}"/>	
+    
+     {% if name == 'madmaggie' %}
+        {% set name = "Mad Maggie" %}
+    {% endif %}
+    
+<h2>{{name | capitalize }}</h2>
+	</div>
+
+{% endmacro %}

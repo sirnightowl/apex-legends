@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    {% include "components/head.njk" %}
+    {# https://leafletjs.com/examples/quick-start/ #}
+
+
+<body>
+  
+
+{% include "components/header.njk" %}
+
+    
+    <style>
+    #map { height: 900px; width: 900px;     background: transparent; }
+    </style>
+
+
+<div id="content">
+    
+    
+    <div id="map">
+    
+    
+   
+    
+    </div>
+    
+
+	
+</div>
+
+
+<footer>
+	
+	
+	
+	
+</footer>
+
+
+
+<!-- Modal -->
+
+    
+    
+    {% include "components/abilities/bloodhound.njk" %}
+    
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/apex-legends/public/scripts/script.js"></script>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    
+    
+    <script>
+   
+ 
+ map = L.map('map', {
+
+            maxZoom: 6,
+            minZoom: 1,
+            crs: L.CRS.Simple,
+            attributionControl: false,
+            renderer: L.canvas(),
+            zoomControl: false,
+            maxBoundsViscosity: 0.0,
+
+        }).setView([0, 0], 2);
+
+       // map.addControl(new L.Control.Fullscreen({ position: 'bottomright' }));
+
+        const southWest = map.unproject([0, 16384], map.getMaxZoom());
+        const northEast = map.unproject([16384, 0], map.getMaxZoom());
+        const center = map.unproject([8192, 8192], map.getMaxZoom());
+
+        map.setMaxBounds(new L.LatLngBounds(southWest, northEast));
+
+        const imageUrl = '/apex-legends/public/img/maps/broken_moon.png';
+
+        map.createPane('apexmap');
+        map.getPane('apexmap').style.zIndex = 200;
+
+       map.createPane('zoneNames');
+        map.getPane('zoneNames').style.zIndex = 230; 
+
+        //Add map image to map
+        L.imageOverlay(imageUrl, new L.LatLngBounds(southWest, northEast), { pane: 'apexmap' }).addTo(map);
+
+        
+        map.setView(center, 2);
+
+      
+
+  
+    </script>
+    
+</body>
+</html>
