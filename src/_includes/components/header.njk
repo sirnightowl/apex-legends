@@ -1,36 +1,41 @@
 <header>
-	<div class="menu">
-		<div class="credit">
-			<span class="credittext">
-				<p>SirNightOwl's</p>
-                <p class="cred">Apex Utilities</p>
-			</span>
-				
-				
-			<div class="badge">
-				<div class="inner">
-                    
-                    {% include "components/icons/apex.svg" %}
-                   
-					
-					
-					
-				</div>
-				
-				</div>
-			
-			
+	 <fieldset>
+    <legend>Pick random</legend>
+        <div class="buttons">
+            
+            <button data-highlight="all"><img src="/apex-legends/public/img/icons/apex_all.png"/>
+            Legend</button>	
+            
+            
+            <button data-highlight="assault"><img src="/apex-legends/public/img/icons/apex_assault.png"/>
+              Assault</button>	
+            
+            <button data-highlight="skirmisher"><img src="/apex-legends/public/img/icons/apex_skirmisher.png"/>
+              Skirmisher</button>	
+            
+   		
+		  <button data-highlight="recon">
+               <img src="/apex-legends/public/img/icons/apex_recon.png"/>
+              {#include "components/icons/recon.svg" #}
+              Recon</button>	
+		  <button data-highlight="support">
+              <img src="/apex-legends/public/img/icons/apex_support.png"/>
+              Support</button>	
+		  
+		  <button data-highlight="controller">
+               <img src="/apex-legends/public/img/icons/apex_controller.png"/>
+              Controller</button>	
 		</div>
-		<a href="/apex-legends/public/index.html"><span>Legends</span></a>
-		<a href="/apex-legends/public/weapons/index.html"><span>Weapons</span></a>
-		<a href="/apex-legends/public/maps/index.html"><span>Maps</span></a>
-         <a href=""><span>Streamers</span></a>
-		
-		<div class="buffer">
-			
-			
-		</div>
-		
-	</div>
+  </fieldset>
+    
+    
 	
 </header>
+
+
+<div class="actions">
+    
+    <button id="select-legend"><img src="img/icons/mouse-leftclick.svg"/> Select Legend</button>
+    
+        <button id="clear-legends"><mark>ESC</mark> Clear</button>
+    </div>
