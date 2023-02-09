@@ -20,7 +20,7 @@ $('.menu  button').on( "click", function() {
 
 
 // right click menu
-$(document).on("contextmenu", ".legend-portrait", function(e){
+/*$(document).on("contextmenu", ".legend-portrait", function(e){
   
 	var selected = $(this).data('legend');
 	$('body').removeClass();
@@ -47,7 +47,7 @@ $(document).on("contextmenu", ".legend-portrait", function(e){
 	
 	return false;
 	
-});
+});*/
 
 function newname(param1,param2) {
 	
@@ -74,17 +74,6 @@ function newname(param1,param2) {
 
 
 
-
-
-$('#character button').on( "click", function() {
-   //alert('Context Menu event has fired!');
-  
-	var selected = $(this).data('legend');
-	$('body').removeClass();
-	$('body').addClass(selected+'-selected');
-    $('body').addClass('showing-abilities');
-	
-});
 
 $('.legend-portrait').on( "click", function() {
    //alert('Context Menu event has fired!');
