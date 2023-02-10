@@ -519,7 +519,7 @@ fieldset button img, fieldset button svg {
   align-items: center;
   margin-left: auto;
   position: absolute;
-  right: 0;
+  right: 70px;
 }
 .classtext .col, .perktext .col {
   padding-right: 30px;
