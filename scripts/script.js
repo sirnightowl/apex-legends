@@ -70,17 +70,6 @@ function newname(param1,param2,param3) {
 	$('.char').removeClass('show');
 	$('#'+param1).addClass('show');
     
-    if (param3 == "assault") { var $classtagline = "SSSS"; }
-    if (param3 == "skirmisher") { var $classtagline = "SSSS"; }
-    if (param3 == "recon") { var $classtagline = "SSSS"; }
-    if (param3 == "support") { var $classtagline = "SSSS"; }
-    if (param3 == "controller") { var $classtagline = "SSSS"; }
-    
-    
-    $(".classtext h3").text(param3);
-    $(".classtext h4").text($classtagline);
-    $(".classtext img").attr("src","/apex-legends/public/img/icons/apex_"+param3+".png");
-    
     
     
 	
@@ -108,7 +97,7 @@ $('.legend-portrait').on( "click", function() {
     
     $('body').removeClass();
     $('body').addClass($newname+'-selected');
-    
+    $('body').addClass($newclass+'-selected');
 
 });
 

@@ -465,7 +465,31 @@ fieldset button img, fieldset button svg {
   text-transform: uppercase;
 }
 
-#classtext h3, #perktext h3 {
+#assault-class, #skirmisher-class, #recon-class, #support-class, #controller-class {
+  display: none;
+}
+
+.assault-selected #assault-class {
+  display: block;
+}
+
+.skirmisher-selected #skirmisher-class {
+  display: block;
+}
+
+.recon-selected #recon-class {
+  display: block;
+}
+
+.support-selected #support-class {
+  display: block;
+}
+
+.controller-selected #controller-class {
+  display: block;
+}
+
+.classtext h3, .perktext h3 {
   font-size: 1.75rem;
   margin: 0;
   color: #fff;
@@ -474,7 +498,7 @@ fieldset button img, fieldset button svg {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
-#classtext h4, #perktext h4 {
+.classtext h4, .perktext h4 {
   font-size: 1rem;
   margin: 0;
   color: #fff;
@@ -483,12 +507,12 @@ fieldset button img, fieldset button svg {
   text-transform: uppercase;
 }
 
-#classtext, #perktext {
+.classtext, .perktext {
   margin-bottom: 2rem;
   font-weight: bold;
   position: fixed;
   right: 100px;
-  top: 240px;
+  top: 150px;
   width: 450px;
   margin-top: 50px;
   display: flex;
@@ -497,26 +521,35 @@ fieldset button img, fieldset button svg {
   position: absolute;
   right: 0;
 }
-#classtext .col, #perktext .col {
+.classtext .col, .perktext .col {
   padding-right: 30px;
+  width: 300px;
 }
-#classtext .image, #perktext .image {
+.classtext .image, .perktext .image {
   padding-left: 30px;
 }
 
-#perktext {
-  top: 350px;
+.perktext {
+  top: 270px;
   width: 350px;
 }
-#perktext .image {
-  border-left: 5px solid #CFC3AD;
+.perktext .image {
+  border-left: 5px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
 }
-#perktext .image img {
+.perktext .image img {
   width: 50px;
   height: 50px;
   display: block;
   margin: 0 auto;
+  opacity: 0;
+}
+.perktext .col {
+  width: 200px;
+}
+
+.perktext2 {
+  top: 360px;
 }
 
 #content {
@@ -886,7 +919,7 @@ fieldset button img, fieldset button svg {
 }
 
 .ability .icon {
-  border-right: 5px solid #CFC3AD;
+  border-right: 5px solid rgba(255, 255, 255, 0.5);
   margin-right: 20px;
   border-radius: 6px;
 }
@@ -909,9 +942,10 @@ footer {
 
 .actions {
   font-family: "Oxanium", cursive;
-  width: 200px;
-  right: 50px;
-  bottom: 100px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
   font-family: "Oxanium", cursive;
 }
 .actions mark {
