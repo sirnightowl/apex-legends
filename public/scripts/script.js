@@ -130,6 +130,7 @@ $('fieldset button').on( "click", function() {
     
     $('body').removeClass();
     $('body').addClass($newname+'-selected');
+    $('body').addClass($newclass+'-selected');
     
 	newname($newname,$newtag,$newclass);
 	
