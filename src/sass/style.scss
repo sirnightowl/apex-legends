@@ -96,7 +96,14 @@ fieldset {
 }
 
 
-#classtext, #perktext {
+#assault-class, #skirmisher-class, #recon-class, #support-class, #controller-class {display: none;}
+.assault-selected #assault-class {display: block;}
+.skirmisher-selected #skirmisher-class {display: block;}
+.recon-selected #recon-class {display: block;}
+.support-selected #support-class {display: block;}
+.controller-selected #controller-class {display: block;}
+
+.classtext, .perktext {
         
         h3 { font-size: 1.75rem; margin: 0; color: #fff; font-weight: 600; text-align: right;
     text-shadow: 0px 0px 0px rgba(0,0,0,0.5); text-transform: uppercase;
@@ -107,14 +114,14 @@ fieldset {
     }
     
     }
-#classtext, #perktext {
+.classtext, .perktext {
     
       
     margin-bottom: 2rem;
     font-weight: bold;
     position: fixed;
     right: 100px;
-        top: 240px;
+        top: 150px;
     width: 450px;
     
     margin-top: 50px;
@@ -123,18 +130,21 @@ fieldset {
     margin-left: auto;
     position: absolute;
     right: 0;
-    .col {padding-right: 30px;}
+    .col {padding-right: 30px; width: 300px;}
     .image{padding-left: 30px;}
 }
 
 
-#perktext {       top: 350px;
+.perktext {     top: 270px;
     width: 350px;
-.image{border-left: 5px solid #CFC3AD; border-radius: 6px;
+.image{border-left: 5px solid rgba(255,255,255,0.5); border-radius: 6px;
     
-    img {width: 50px; height: 50px; display: block; margin: 0 auto;}
+    img {width: 50px; height: 50px; display: block; margin: 0 auto; opacity: 0.0;}
     }
+     .col {    width: 200px;}
 }
+
+.perktext2 { top: 360px;}
 
 #content {display: flex; padding: 2rem 10rem; flex-wrap: wrap;     position: relative;
     z-index: 3;}
@@ -356,7 +366,7 @@ background: linear-gradient(180deg, rgba(192, 168, 41, 0) 0%, #BCA729 100%);
 
 
 
-.ability .icon { border-right: 5px solid #CFC3AD; margin-right: 20px;     border-radius: 6px;}
+.ability .icon { border-right: 5px solid rgba(255,255,255,0.5); margin-right: 20px;     border-radius: 6px;}
 .ability .icon svg, .ability .icon img {
    width: 80px;
     filter: invert(100%);
@@ -376,14 +386,11 @@ footer {
 
 .actions { 
         
- 
-    font-family: "Oxanium", cursive;
-    //position: fixed;
-    width: 200px;
-    right: 50px;
-    bottom: 100px;
-
-        
+ font-family: "Oxanium", cursive;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
         
         
         font-family: 'Oxanium', cursive;
