@@ -1,0 +1,42 @@
+
+{% set legend = "seer" %}
+{% set Passive = "Heart_Seeker" %}
+{% set Tactical = "Focus_of_Attention" %}
+{% set Ultimate = "Exhibit" %}
+
+
+<div class="abilties {{legend}}-abilities">
+			
+		<div class="ability">
+			<div class="icon">
+			<img src="/apex-legends/public/img/abilityicons/{{legend}}/{{Passive}}.svg"/>
+				</div>
+			<div class="col">
+                <h3>Passive</h3>
+			     <h2>{{ Passive | replace("_", " ") }}</h2>
+            </div>
+		</div>
+		
+		<div class="ability">
+			<div class="icon">
+			<img src="/apex-legends/public/img/abilityicons/{{legend}}/{{Tactical}}.svg"/>
+			</div>
+            <div class="col">
+                <h3>Tactical</h3>
+                <h2>{{ Tactical | replace("_", " ") }}</h2>
+            </div>
+		</div>
+		
+		<div class="ability ultimate">
+            <div class="icon">
+			<img src="/apex-legends/public/img/abilityicons/{{legend}}/{{Ultimate}}.svg"/>
+                  </div>
+			<div class="col">
+                <h3>Ultimate</h3>
+			     <h2>{{ Ultimate | replace("_", " ") }}</h2>
+            </div>
+		</div>
+			
+			
+			
+		</div>

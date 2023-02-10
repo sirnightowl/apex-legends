@@ -18,9 +18,32 @@
     
     
     <div id="name" class="row name">
-		<h2 class="slide-right">Bloodhound</h2>
-		<h3 class="slide-left">Technological Tracker</h3>
-	</div>
+        <div class="nameback"></div>
+		<h2 id="name1" class="slide-right">Bloodhound</h2>
+		<h3 id="name2" class="slide-left">Technological Tracker</h3>
+     </div>
+    
+    
+       <div id="classtext">
+            <div class="col">
+           <h3 class="s-left">Skirmisher</h3>
+		  <h4 class="s-left">Technological Tracker</h4>
+                </div>
+            <div class="image">
+            <img src="/apex-legends/public/img/icons/apex_skirmisher.png"/>
+            </div>
+        </div>
+        
+        <div id="perktext">
+            <div class="col">
+          <h4 class="s-left">Care Package</h4>
+		  <h4 class="s-left">Insight</h4>
+                </div>
+             <div class="image">
+            <img src="/apex-legends/public/img/icons/apex_recon.png"/>
+            </div>
+        </div>
+        
     
 
 <div id="legends">
@@ -335,7 +358,35 @@
 
     
     
+    
+     {% include "components/abilities/bangalore.njk" %}
+    {% include "components/abilities/revenant.njk" %}
+    {% include "components/abilities/fuse.njk" %}
+    {% include "components/abilities/ash.njk" %}
+    {% include "components/abilities/madmaggie.njk" %}
+    
+    {% include "components/abilities/pathfinder.njk" %}
+    {% include "components/abilities/wraith.njk" %}
+    {% include "components/abilities/mirage.njk" %}
+    {% include "components/abilities/octane.njk" %}
+    {% include "components/abilities/horizon.njk" %}
+    {% include "components/abilities/valkyrie.njk" %}
+    
+    
     {% include "components/abilities/bloodhound.njk" %}
+    {% include "components/abilities/crypto.njk" %}
+    {% include "components/abilities/seer.njk" %}
+    {% include "components/abilities/vantage.njk" %}
+    
+     {% include "components/abilities/gibraltar.njk" %}
+    {% include "components/abilities/lifeline.njk" %}
+     {% include "components/abilities/loba.njk" %}
+    {% include "components/abilities/newcastle.njk" %}
+    
+    {% include "components/abilities/caustic.njk" %}
+    {% include "components/abilities/wattson.njk" %}
+    {% include "components/abilities/rampart.njk" %}
+    {% include "components/abilities/catalyst.njk" %}
     
 {#{%  include "components/smoke.njk" %} #}
 

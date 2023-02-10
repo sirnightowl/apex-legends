@@ -49,7 +49,7 @@ $('.menu  button').on( "click", function() {
 	
 });*/
 
-function newname(param1,param2) {
+function newname(param1,param2,param3) {
 	
 	
    	$("#name h2").text(param1);
@@ -69,6 +69,20 @@ function newname(param1,param2) {
 	
 	$('.char').removeClass('show');
 	$('#'+param1).addClass('show');
+    
+    if (param3 == "assault") { var $classtagline = "SSSS"; }
+    if (param3 == "skirmisher") { var $classtagline = "SSSS"; }
+    if (param3 == "recon") { var $classtagline = "SSSS"; }
+    if (param3 == "support") { var $classtagline = "SSSS"; }
+    if (param3 == "controller") { var $classtagline = "SSSS"; }
+    
+    
+    $(".classtext h3").text(param3);
+    $(".classtext h4").text($classtagline);
+    $(".classtext img").attr("src","/apex-legends/public/img/icons/apex_"+param3+".png");
+    
+    
+    
 	
 }
 
@@ -87,7 +101,14 @@ $('.legend-portrait').on( "click", function() {
 	var $newname = $(this).data('legend');
 	if ($newname == "madmaggie") { var $newname = "Mad Maggie"; }
 	var $newtag = $(this).data('tag');
-	newname($newname,$newtag);
+    var $newclass = $(this).data('class');
+	newname($newname,$newtag,$newclass);
+    
+    if ($newname == "Mad Maggie") { var $newname = "madmaggie"; }
+    
+    $('body').removeClass();
+    $('body').addClass($newname+'-selected');
+    
 
 });
 
@@ -116,7 +137,12 @@ $('fieldset button').on( "click", function() {
 	
 	var $newname = $('.spotlight').data('legend');
 	var $newtag = $('.spotlight').data('tag');
-	newname($newname,$newtag);
+    var $newclass = $('.spotlight').data('class');
+    
+    $('body').removeClass();
+    $('body').addClass($newname+'-selected');
+    
+	newname($newname,$newtag,$newclass);
 	
 	
 	
