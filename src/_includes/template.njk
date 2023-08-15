@@ -38,7 +38,7 @@
     
     {{ legendtile.legendtile('bangalore', 'assault','Professional Soldier', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/37/Portrait_Bangalore_square.png' ) }}
     
-    {{ legendtile.legendtile('revenant', 'assault','Synthetic Nightmare', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d1/Portrait_Revenant_square.png' ) }}
+    {{ legendtile.legendtile('ballistic', 'assault','Refined Gunslinger', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/3/32/Portrait_Ballistic_square.png' ) }}
     
     {{ legendtile.legendtile('fuse', 'assault','Bombastic Explosives Expert', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/be/Portrait_Fuse_square.png' ) }}
     
@@ -80,9 +80,11 @@
     
     {{ legendtile.legendtile('wraith', 'skirmisher','Interdimensional Skirmisher', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/6/67/Portrait_Wraith_square.png' ) }}
     
-      {{ legendtile.legendtile('mirage', 'skirmisher','Holographic Trickster', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/c8/Portrait_Mirage_square.png' ) }}
+      
     
      {{ legendtile.legendtile('octane', 'skirmisher','High-Speed Daredevil', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/9a/Portrait_Octane_square.png' ) }}
+        
+        {{ legendtile.legendtile('revenant', 'skirmisher','Synthetic Nightmare', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d1/Portrait_Revenant_square.png' ) }}
     
     {{ legendtile.legendtile('horizon', 'skirmisher','Gravitational Manipulator', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/97/Portrait_Horizon_square.png' ) }}
     
@@ -164,6 +166,8 @@
 
 	
     {{ legendtile.legendtile('lifeline', 'support','Combat Medic', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/fa/Portrait_Lifeline_square.png' ) }}
+         
+         {{ legendtile.legendtile('mirage', 'support','Holographic Trickster', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/c/c8/Portrait_Mirage_square.png' ) }}
     
     {{ legendtile.legendtile('loba', 'support','Translocating Thief', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/0/05/Portrait_Loba_square.png' ) }}
     
@@ -245,6 +249,9 @@
 	
 	
 <div id="character">
+    <div id="ballistic" class="char">
+		<img src="/apex-legends/public/img/legends/ballistic.png"/>
+	</div>
 	<div id="bloodhound" class="char">
 		<img src="/apex-legends/public/img/legends/bloodhound.png"/>
 	</div>
@@ -336,16 +343,16 @@
     
     
     
-     {% include "components/abilities/bangalore.njk" %}
-    {% include "components/abilities/revenant.njk" %}
+    {% include "components/abilities/bangalore.njk" %}
     {% include "components/abilities/fuse.njk" %}
     {% include "components/abilities/ash.njk" %}
     {% include "components/abilities/madmaggie.njk" %}
+    {% include "components/abilities/ballistic.njk" %}
     
     {% include "components/abilities/pathfinder.njk" %}
     {% include "components/abilities/wraith.njk" %}
-    {% include "components/abilities/mirage.njk" %}
     {% include "components/abilities/octane.njk" %}
+    {% include "components/abilities/revenant.njk" %}
     {% include "components/abilities/horizon.njk" %}
     {% include "components/abilities/valkyrie.njk" %}
     
@@ -357,6 +364,7 @@
     
      {% include "components/abilities/gibraltar.njk" %}
     {% include "components/abilities/lifeline.njk" %}
+    {% include "components/abilities/mirage.njk" %}
      {% include "components/abilities/loba.njk" %}
     {% include "components/abilities/newcastle.njk" %}
     
