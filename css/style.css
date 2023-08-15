@@ -846,6 +846,10 @@ fieldset button img, fieldset button svg {
   display: block;
 }
 
+.ballistic-selected .ballistic-abilities {
+  display: block;
+}
+
 .pathfinder-selected .pathfinder-abilities {
   display: block;
 }
