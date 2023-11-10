@@ -906,6 +906,10 @@ fieldset button img, fieldset button svg {
   display: block;
 }
 
+.conduit-selected .conduit-abilities {
+  display: block;
+}
+
 .caustic-selected .caustic-abilities {
   display: block;
 }
