@@ -87,8 +87,13 @@
         {{ legendtile.legendtile('revenant', 'skirmisher','Synthetic Nightmare', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/d/d1/Portrait_Revenant_square.png' ) }}
     
     {{ legendtile.legendtile('horizon', 'skirmisher','Gravitational Manipulator', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/9/97/Portrait_Horizon_square.png' ) }}
+		
+		
+		{{ legendtile.legendtile('alter', 'skirmisher','Void Breacher', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/5/56/Portrait_Alter_square.png' ) }}
+		
+		
     
-    {{ legendtile.legendtile('valkyrie', 'skirmisher','Winged Avenger', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b0/Portrait_Valkyrie_square.png' ) }}
+   
         
         
         <div class="titlebar">
@@ -132,6 +137,8 @@
     {{ legendtile.legendtile('seer', 'recon','Ambush Artist', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f2/Portrait_Seer_square.png' ) }}
     
     {{ legendtile.legendtile('vantage', 'recon','Survivalist Sniper', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/f/f8/Portrait_Vantage_square.png' ) }}
+		
+		 {{ legendtile.legendtile('valkyrie', 'recon','Winged Avenger', 'https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/b/b0/Portrait_Valkyrie_square.png' ) }}
         
         
         
@@ -329,6 +336,9 @@
     <div id="conduit" class="char">
 		<img src="/apex-legends/public/img/legends/conduit.png"/>
 	</div>
+	<div id="alter" class="char">
+		<img src="/apex-legends/public/img/legends/conduit.png"/>
+	</div>
 		
 	
 		
@@ -362,13 +372,14 @@
     {% include "components/abilities/octane.njk" %}
     {% include "components/abilities/revenant.njk" %}
     {% include "components/abilities/horizon.njk" %}
-    {% include "components/abilities/valkyrie.njk" %}
+    {% include "components/abilities/alter.njk" %} 
     
     
     {% include "components/abilities/bloodhound.njk" %}
     {% include "components/abilities/crypto.njk" %}
     {% include "components/abilities/seer.njk" %}
     {% include "components/abilities/vantage.njk" %}
+	{% include "components/abilities/valkyrie.njk" %}
     
      {% include "components/abilities/gibraltar.njk" %}
     {% include "components/abilities/lifeline.njk" %}

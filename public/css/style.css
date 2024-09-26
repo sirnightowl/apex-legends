@@ -563,7 +563,7 @@ fieldset button img, fieldset button svg {
 #legends {
   display: flex;
   flex-wrap: wrap;
-  width: 1150px;
+  width: 1300px;
   flex-direction: column;
   padding-top: 0px;
   position: fixed;
@@ -701,6 +701,7 @@ fieldset button img, fieldset button svg {
   z-index: 3;
   margin: 0px;
   width: 72px;
+  height: 75px;
   display: inline-block;
   border: 2px solid rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -870,7 +871,7 @@ fieldset button img, fieldset button svg {
   display: block;
 }
 
-.valkyrie-selected .valkyrie-abilities {
+.alter-selected .alter-abilities {
   display: block;
 }
 
@@ -887,6 +888,10 @@ fieldset button img, fieldset button svg {
 }
 
 .vantage-selected .vantage-abilities {
+  display: block;
+}
+
+.valkyrie-selected .valkyrie-abilities {
   display: block;
 }
 
